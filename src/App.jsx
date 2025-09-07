@@ -21,6 +21,7 @@ const App = () => {
   var tl2 = gsap.timeline();
 
   const settimer = contextSafe(() => {
+    if (timer.current) return;
     timer.current = setInterval(() => {
       tl.to(storeRef.current, {
         yPercent: 100,
